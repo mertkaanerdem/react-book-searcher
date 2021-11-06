@@ -11,7 +11,10 @@ function Book() {
   return (
     <div>
       {filteredBook.map((book) => (
-        <p>{book.volumeInfo.title}</p>
+        <>
+          <p>{book.volumeInfo.title}</p>
+          <Link to="/">Go to home page</Link>
+        </>
       ))}
     </div>
   );
