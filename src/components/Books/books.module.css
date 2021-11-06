@@ -1,0 +1,36 @@
+.booksContainer {
+  background-color: antiquewhite;
+  width: 75%;
+  align-self: center;
+  margin: 0 50px;
+  display: grid;
+  grid-gap: 50px;
+  align-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
+}
+
+.bookCard {
+  border: 1px solid red;
+  box-shadow: 0 0 1px 1px #932788;
+  font-size: 13px;
+}
+.image {
+  width: 100%;
+}
+@media only screen and (max-width: 600px) {
+  .booksContainer {
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .booksContainer {
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+  }
+}

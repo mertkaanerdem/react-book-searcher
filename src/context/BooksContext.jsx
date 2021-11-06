@@ -10,11 +10,14 @@ function BooksProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios
-      .get(`https://www.googleapis.com/books/v1/volumes?q=${searchedName}`)
-      .then((res) => setBooks(res.data.items))
-      .catch((err) => console.log(err))
-      .finally(() => setLoading(false));
+    async function fetchData() {
+      await axios
+        .get(`https://www.googleapis.com/books/v1/volumes?q=${searchedName}`)
+        .then((res) => setBooks(res.data.items))
+        .catch((err) => console.log(err))
+        .finally(() => setLoading(false));
+    }
+    fetchData();
   }, [searchedName]);
 
   const values = {
