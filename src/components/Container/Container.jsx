@@ -1,6 +1,7 @@
 import React from "react";
 import { BooksProvider } from "../../context/BooksContext";
 import Books from "../Books/Books";
+import Footer from "../Footer/Footer";
 import Form from "../Form/Form";
 import Header from "../Header/Header";
 
@@ -14,6 +15,7 @@ function Container() {
         <Form />
         <Books />
       </BooksProvider>
+      <Footer />
     </div>
   );
 }
