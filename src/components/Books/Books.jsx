@@ -1,6 +1,7 @@
 import styles from "./books.module.css";
 import placer from "../../assets/placer.jpg";
 import { useBooks } from "../../context/BooksContext";
+import { Link } from "react-router-dom";
 
 function Books() {
   const { books, loading } = useBooks();
@@ -26,6 +27,7 @@ function Books() {
             ))}
           </>
           <p className={styles.date}>{book.volumeInfo.publishedDate}</p>
+          <Link to={`/${book.id}`}>Details</Link>
         </div>
       ))}
     </div>
