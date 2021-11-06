@@ -1,5 +1,5 @@
 import { useBooks } from "../../context/BooksContext";
-
+import styles from "./form.module.css";
 function Form() {
   const { searchName, setSearchName, setSearchedName } = useBooks();
 
@@ -11,7 +11,7 @@ function Form() {
     setSearchName("");
   };
   return (
-    <div>
+    <div className={styles.Container}>
       <form onSubmit={handleSubmit}>
         <input
           placeholder="Enter the name"
