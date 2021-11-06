@@ -13,12 +13,14 @@ function Form() {
   return (
     <div className={styles.Container}>
       <form onSubmit={handleSubmit}>
-        <input
-          placeholder="Enter the name"
-          value={searchName}
-          onChange={(e) => setSearchName(e.target.value)}
-        />
-        {/* <button onClick={handleSubmit}>anan</button> */}
+        <div className={styles.inputContainer}>
+          <span className={styles.pressEnter}>Press Enter</span>
+          <input
+            placeholder="Enter the name"
+            value={searchName}
+            onChange={(e) => setSearchName(e.target.value)}
+          />
+        </div>
       </form>
     </div>
   );
