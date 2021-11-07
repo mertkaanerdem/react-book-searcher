@@ -36,6 +36,23 @@
   padding: 5px;
 }
 
+.button {
+  position: absolute;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.button:hover {
+  color: white;
+  background: black;
+  transition: 0.5s;
+}
 /* sizes */
 @media only screen and (max-width: 600px) {
   .booksContainer {

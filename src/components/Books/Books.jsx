@@ -27,7 +27,9 @@ function Books() {
             ))}
           </>
           <p className={styles.date}>{book.volumeInfo.publishedDate}</p>
-          <Link to={`/${book.id}`}>Details</Link>
+          <Link className={styles.button} to={`/${book.id}`}>
+            Details
+          </Link>
         </div>
       ))}
     </div>
