@@ -20,12 +20,12 @@ function Books() {
           <p className={styles.title}>
             <span>{book.volumeInfo.title}</span>
           </p>
-          <>
+          <div className={styles.author}>
             Author(s):
             {book.volumeInfo.authors.map((author, i) => (
               <span key={i}> {author}</span>
             ))}
-          </>
+          </div>
           <p className={styles.date}>{book.volumeInfo.publishedDate}</p>
           <Link className={styles.button} to={`/${book.id}`}>
             Details

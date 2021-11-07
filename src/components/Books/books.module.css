@@ -20,6 +20,12 @@
 }
 .title {
   font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+}
+.author {
+  font-style: italic;
+  padding: 10px 2px;
 }
 
 .image {
